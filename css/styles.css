@@ -7,3 +7,22 @@ h1 {
     font-family: "Brush Script MT", cursive;
     font-size: 2.5rem;
 }
+
+a:link {
+    text-decoration: none;
+    color: #A86464;
+}
+a:visited {
+    text-decoration: none;
+    color: #92817A;
+}
+a:hover {
+    background-color: #F4EFD3;
+}
+a:hover.image-link {
+    background-color: transparent;
+}
+a:active {
+    color: #FF8080;
+}
+  
