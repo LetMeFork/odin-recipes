@@ -1,13 +1,37 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color: #EAE0DA;
     font-family: "Trebuchet MS", Arial, sans-serif;
 }
 
-h1 {
+.heading {
     font-family: "Brush Script MT", cursive;
-    font-size: 2.5rem;
+    font-size: 1.25rem;
+    text-align: center;
 }
 
+.menu {
+    text-align: center;
+}
+.menu__slot {
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+    margin: 0 30px;
+}
+
+a {
+    display: inline-block;
+    border-radius: 5px;
+    padding: 1px;
+}
+.menu__link,
+.button-back {
+    padding: 5px;
+}
 a:link {
     text-decoration: none;
     color: #A86464;
@@ -23,6 +47,6 @@ a:hover.image-link {
     background-color: transparent;
 }
 a:active {
-    color: #FF8080;
+    color: #81b69d;
 }
   
