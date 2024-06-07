@@ -5,48 +5,153 @@
 body {
     background-color: #EAE0DA;
     font-family: "Trebuchet MS", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #A86464;
 }
 
 .heading {
     font-family: "Brush Script MT", cursive;
-    font-size: 1.25rem;
     text-align: center;
 }
 
+/* Homepage (Menu of Recipes) */
 .menu {
-    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.menu .heading {
+    font-size: 3rem;
+}
+.menu__list {
+    display: flex;
+    justify-content: center;
 }
 .menu__slot {
-    display: inline-block;
-    vertical-align: top;
-    text-align: left;
     margin: 0 30px;
 }
 
+/* Links */
 a {
     display: inline-block;
     border-radius: 5px;
     padding: 1px;
 }
-.menu__link,
-.button-back {
+.menu__link {
     padding: 5px;
 }
 a:link {
     text-decoration: none;
     color: #A86464;
 }
-a:visited {
-    text-decoration: none;
-    color: #88726c;
-}
 a:hover {
     background-color: #F4EFD3;
-}
-a:hover.image-link {
-    background-color: transparent;
 }
 a:active {
     color: #81b69d;
 }
-  
+a:visited {
+    text-decoration: none;
+    color: #88726c;
+}
+/* Link - Initial Image */
+.initial__img__link:link .initial__img {
+    border-radius: 50%;
+    border: 2px solid #A86464;
+}
+.initial__img__link:hover {
+    background-color: transparent;
+}
+.initial__img__link:hover .initial__img {
+    border: 2px solid #F4EFD3;
+}
+.initial__img__link:active .initial__img {
+    border: 2px solid #81b69d;
+}
+/* Link - Button Back */
+.button-back {
+    position: fixed;
+    border-radius: 0;
+    height: 100%;
+    width: 90px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Recipe page */
+.recipe {
+    flex: 1;
+    margin-left: 90px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+/* Recipe - Initial section (heading, image, credits) */
+.recipe__initial {
+    min-width: 350px;
+    margin-right: 40px;
+    text-align: center;
+}
+.initial__heading {
+    font-family: "Brush Script MT", cursive;
+    font-size: 3rem;
+}
+/* Recipe - Body section (recipe itself) */
+.recipe__body {
+    min-width: 350px;
+    width: 45%;
+    max-width: 700px;
+    margin: 20px 40px 20px 0;
+}
+.recipe__body h2,
+.recipe__body h3 {
+    text-align: center;
+}
+.recipe__body li:hover,
+.recipe__body p:hover {
+    background-color: #F4EFD3;
+    border-radius: 5px;
+}
+
+/* Spoilers */
+details {
+    border: 1px solid #A86464;
+    border-radius: 5px;
+}
+summary {
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0.5em;
+}
+summary:hover {
+    background-color: #F4EFD3;
+    border-radius: 0.5em;
+}
+#equipment {
+    margin-bottom: 1em;
+}
+/* Spoilers - disclosed */
+details[open] {
+    padding: 0.5em;
+}
+details[open] summary {
+    border-bottom: 1px solid #A86464;
+    margin: -0.5em -0.5em 0;
+}
+details[open] summary:hover {
+    border-radius: 0.5em 0.5em 0 0;
+}
