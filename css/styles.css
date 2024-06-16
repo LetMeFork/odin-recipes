@@ -13,6 +13,7 @@ body {
     display: flex;
 }
 
+/* Headings - General */
 h1,
 h2,
 h3,
@@ -21,7 +22,13 @@ h5,
 h6 {
     color: #A86464;
 }
-
+h2:hover,
+h3:hover,
+h4:hover,
+h5:hover,
+h6:hover {
+    text-decoration: underline;
+}
 .heading {
     font-family: "Brush Script MT", cursive;
     text-align: center;
@@ -38,20 +45,27 @@ h6 {
 .menu__list {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 .menu__slot {
     margin: 0 30px;
 }
+.menu__slot li {
+    margin: 10px auto;
+}
+.menu__slot li a {
+    padding: 5px;
+}
 
 /* Links */
 a {
-    display: inline-block;
     border-radius: 5px;
     padding: 1px;
 }
-.menu__link {
+/* .menu__link {
+    margin: 5px;
     padding: 5px;
-}
+} */
 a:link {
     text-decoration: none;
     color: #A86464;
@@ -67,6 +81,10 @@ a:visited {
     color: #88726c;
 }
 /* Link - Initial Image */
+.initial__img {
+    width: 350px;
+    height: auto;
+}
 .initial__img__link:link .initial__img {
     border-radius: 50%;
     border: 2px solid #A86464;
@@ -90,6 +108,10 @@ a:visited {
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 0.5;
+}
+.button-back:hover {
+    opacity: 1;
 }
 
 /* Recipe page */
@@ -141,7 +163,7 @@ summary:hover {
     background-color: #F4EFD3;
     border-radius: 0.5em;
 }
-#equipment {
+#ingredients {
     margin-bottom: 1em;
 }
 /* Spoilers - disclosed */
